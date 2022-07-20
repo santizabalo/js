@@ -1,0 +1,35 @@
+.logo{
+width: 100px;
+height: 100px;
+}
+
+.introduccion{
+background-image: linear-gradient(rgba(250, 250, 250, 0.5),rgba(255, 255, 255, 0.089)), url(fotos/OMEGA.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5%;
+  padding: 1%;
+  height: 59vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bienvenidos-container{
+ align-items: center;
+ color: rgb(147, 255, 153);
+ 
+}
+
+.bienvenidos-titulo{
+font-size: 700%;
+margin-top: -50%;
+text-align: center;
+}
+
+.bienvenidos-texto{
+    margin-top: 0%;
+    font-size: 300%;
+    text-align: center;
+
+}
