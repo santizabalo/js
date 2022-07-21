@@ -1,3 +1,58 @@
+
+
+const nombre = prompt("Ingrese su nombre")
+
+alert( "Hola, " + nombre + " ¡Bienvenidos a Omega")
+
+let comida = prompt("Ingrese el tipo de comida deseado (opcion 1 vegetariano, opcion 2 carnivoro)")
+
+while(comida !=1 && comida !=2 ) {
+    alert("La opción seleccionada no existe, paparulo")
+    comida = prompt("Ingrese el tipo de comida deseado (opcion 1 vegetariano, opcion 2 carnivoro)")
+
+}
+
+class vegetariano {
+    constructor(id,plato, precio,) {
+        this.id =id;
+        this.plato = plato;
+        this.precio = parseFloat(precio);
+    }
+}
+class carnivoro {
+    constructor(id,plato, precio,) {
+        this.id =id;
+        this.plato = plato;
+        this.precio = parseFloat(precio);
+    }
+
+}
+
+const carnivoros = [];
+carnivoros.push(new carnivoro(0,"Pastel de papa", 500));
+carnivoros.push(new carnivoro(1,"Milanesa a caballo", 550));
+localStorage.setItem('carnivoro', JSON.stringify(carnivoros));
+
+
+const vegetarianos = [];
+vegetarianos.push(new vegetariano(0,"Guiso de Lenteja", 500));
+vegetarianos.push(new vegetariano(1,"Sopa de tomate", 550));
+
+if(comida === "1"){
+    for(const menu of vegetarianos){
+        alert(`Opción ${menu.id} - ${menu.plato} - Precio: $${menu.precio}`)
+    }
+    let eleccion = parseInt(prompt("Escriba el número de su plato"));
+    let platoSeleccionado = vegetarianos[eleccion]
+}else{
+    for(const menu of carnivoros){
+        alert(`Opción ${menu.id} - ${menu.plato} - Precio: $${menu.precio}`)
+    }
+    let eleccion = parseInt(prompt("Escriba el número de su plato"));
+    let platoSeleccionado = carnivoros[eleccion]
+}
+
+
 /*
 const nombre = prompt("Ingrese su nombre")
 const direccion = prompt("Ingrese su direccion")
@@ -87,7 +142,7 @@ const cliente = { nombre:"",
 */
 
 
-
+/*
 
 
 const nombre = prompt("Ingrese su nombre")
@@ -156,7 +211,7 @@ const cliente = { nombre:"",
 }
 
 
-
+*/
 /*
 let stockProductos = [
     {id: 1, nombre: "vianda 1", tipo: "vianda", desc: "Viandas de vegetales", precio: 500, img: "imagenes/vianda-1.jpg"},
@@ -251,7 +306,6 @@ const viandas = [
         img: "",
     }
 ]
-
 let formadepago =prompt("Cual es tu forma de pago? 1)Efectivo/2)Tarjeta")
 if (formadepago == "1") {
     preciofinal = (pedido * precio) * 0.90
@@ -264,9 +318,6 @@ const cliente = { nombre:"",
                 direccion:"",
                 contacto:""
 }
-
-
-
 const nombre = prompt("Ingrese su nombre")
 alert( "Hola, " + nombre + " ¡Bienvenidos a Alpha!")
 let comida = prompt("Ingrese el tipo de comida deseado (opcion 1 vegetariano, opcion 2 carnivoro)")
